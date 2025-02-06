@@ -7,7 +7,9 @@
 		"trusted_origins": [
 			"https://gophish-production-b1ad.up.railway.app",
 			"http://gophish-production-b1ad.up.railway.app"	
-		]
+		], 
+
+		"disable_referrer_check": true
 	},
 	"phish_server": {
 		"listen_url": "0.0.0.0:8080",
