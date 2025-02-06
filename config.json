@@ -1,26 +1,25 @@
 {
-	"admin_server": {
-		"listen_url": "0.0.0.0:3333",
-		"use_tls": true,
-		"cert_path": "gophish_admin.crt",
-		"key_path": "gophish_admin.key",
-		"trusted_origins": [
-			"https://gophish-production-b1ad.up.railway.app",
-			"http://gophish-production-b1ad.up.railway.app"	
-		] 
-	},
-	"phish_server": {
-		"listen_url": "0.0.0.0:8080",
-		"use_tls": false,
-		"cert_path": "example.crt",
-		"key_path": "example.key"
-	},
-	"db_name": "sqlite3",
-	"db_path": "gophish.db",
-	"migrations_prefix": "db/db_",
-	"contact_address": "",
-	"logging": {
-		"filename": "",
-		"level": "info"
-	}
+  "admin_server": {
+    "listen_url": "0.0.0.0:3333",   // Change to 0.0.0.0 for public access
+    "use_tls": false,                  // Enable TLS for HTTPS
+    "cert_path": "gophish_admin.crt", // Will need SSL cert if using TLS
+    "key_path": "gophish_admin.key",  // Key for the cert
+    "trusted_origins": [
+      "gophish-production-b1ad.up.railway.appp"   // Update with your Railway URL
+    ]
+  },
+  "phish_server": {
+    "listen_url": "0.0.0.0:8080",  // Binding phishing server to port 8080
+    "use_tls": false,               // No TLS for phishing server for simplicity
+    "cert_path": "example.crt",     // You can leave empty if no TLS
+    "key_path": "example.key"
+  },
+  "db_name": "sqlite3",             // Use SQLite database by default
+  "db_path": "gophish.db",          // Location to store the database
+  "migrations_prefix": "db/db_",
+  "contact_address": "",
+  "logging": {
+    "filename": "",
+    "level": "info"
+  }
 }
